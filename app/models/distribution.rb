@@ -19,7 +19,7 @@ class Distribution < ActiveRecord::Base
 
   with_options on: :ckan do |distribution|
     distribution.validates :title, :description, :download_url, :publish_date,
-                           :format, :modified, :temporal, presence: true
+                           :format, :modified, presence: true
   end
 
   alias_attribute :identifier, :slug

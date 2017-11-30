@@ -114,10 +114,10 @@ describe Dataset do
       expect(dataset).not_to be_valid(:ckan)
     end
 
-    it 'should not be valid without the temporal field' do
+    it 'should be valid without the temporal field' do
       allow(dataset).to receive(:temporal) { nil }
 
-      expect(dataset).not_to be_valid(:ckan)
+      expect(dataset).to be_valid(:ckan)
     end
 
     it 'should not be valid without the sector field' do

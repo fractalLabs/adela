@@ -21,11 +21,6 @@ describe Distribution do
     it 'should not be valid with higher modified that today' do
       new_distribution = build(:distribution, modified:Date.today.next_day(1))
     end
-
-    xit 'should not be valid with higher initial perido that end periodo' do
-      new_distribution = build(:distribution, temporal: '2016-09-13/2016-09-05')
-      expect(new_distribution).not_to be_valid
-    end
   end
 
   describe '#valid?(:ckan)' do
@@ -65,10 +60,10 @@ describe Distribution do
       expect(distribution).not_to be_valid(:ckan)
     end
 
-    it 'should not be valid without a temporal' do
+    it 'should be valid without a temporal' do
       allow(distribution).to receive(:temporal) { nil }
 
-      expect(distribution).not_to be_valid(:ckan)
+      expect(distribution).to be_valid(:ckan)
     end
   end
 
