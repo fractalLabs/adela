@@ -35,13 +35,13 @@
             = f.email_field :mbox, class: 'form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.email_field')}", required: true
       .row
         .col-xs-6
-          .form-group.required
+          .form-group
             = f.label :temporal_init_date, 'Inicio del período de tiempo cubierto', class: 'control-label'
-            = f.text_field :temporal_init_date, 'data-placement': 'right', 'data-container':'body', value: f.object.temporal_init_date&.strftime('%F'), required: true, class: 'datepicker form-control dpDate', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.temporal.init')}"
+            = f.text_field :temporal_init_date, 'data-placement': 'right', 'data-container':'body', value: f.object.temporal_init_date&.strftime('%F'), class: 'datepicker form-control dpDate', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.temporal.init')}"
         .col-xs-6
-          .form-group.required
+          .form-group
             = f.label :temporal_term_date, 'Fin del período de tiempo cubierto', class: 'control-label'
-            = f.text_field :temporal_term_date, 'data-placement': 'right', 'data-container':'body', value: f.object.temporal_term_date&.strftime('%F'), required: true, class: 'datepicker form-control dpDate', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.temporal.term')}"
+            = f.text_field :temporal_term_date, 'data-placement': 'right', 'data-container':'body', value: f.object.temporal_term_date&.strftime('%F'), class: 'datepicker form-control dpDate', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.temporal.term')}"
       .row
         .col-xs-6
           .form-group.required
