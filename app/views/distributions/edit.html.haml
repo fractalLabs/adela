@@ -10,9 +10,9 @@
       .form-group.required
         = f.label :title, class: 'control-label'
         = f.text_field :title, required: true, class: 'form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.distribution.title')}"
-      .form-group.required
+      .form-group
         = f.label :description, class: 'control-label'
-        = f.text_area :description, required: true, class: 'autosize form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.description')}"
+        = f.text_area :description, class: 'autosize form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.description')}"
       .form-group.required
         = f.label :download_url, 'URL para descargar', class: 'control-label'
         = f.url_field :download_url, class: 'form-control', required: true, 'data-toggle': 'tooltip', title: "#{t('tooltip.distribution.download_url')}"
