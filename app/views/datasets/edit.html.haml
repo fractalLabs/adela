@@ -58,9 +58,9 @@
       .form-group
         = f.label :quality, 'URL para consultar el proceso de calidad de datos', class: 'control-label'
         = f.url_field :quality, class: 'form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.quality')}"
-      .form-group.required
+      .form-group
         = f.label :keyword, 'Palabras clave (separadas por coma)', class: 'control-label'
-        = f.text_area :keyword, class: 'form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.keyword')}", required: true
+        = f.text_area :keyword, class: 'form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.keyword')}"
       .form-group
         = f.label :comments, 'Observaciones'
         = f.text_area :comments, class: 'form-control', 'data-toggle': 'tooltip', title: "#{t('tooltip.dataset.comments')}"

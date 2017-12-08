@@ -18,7 +18,7 @@ class Distribution < ActiveRecord::Base
   after_commit :update_dataset_metadata
 
   with_options on: :ckan do |distribution|
-    distribution.validates :title, :description, :download_url, :publish_date,
+    distribution.validates :title, :download_url, :publish_date,
                            :format, :modified, presence: true
   end
 
