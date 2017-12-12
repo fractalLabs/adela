@@ -40,7 +40,10 @@ class Dataset < ActiveRecord::Base
   end
 
   def keywords
-    "#{keyword.chomp(',')},#{sectors}".chomp(',').lchomp(',').downcase.strip
+    keywords = []
+    keywords.push(*keyword.split(','))
+    keywords.push(*sectors.split(','))
+    keywords.compact.join(',')
   end
 
   def openess_rating
